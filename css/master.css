@@ -1,0 +1,385 @@
+@font-face {
+   font-family: Segoe UI_Normal;
+   src: url('Tipography/segoeui.ttf');
+}
+
+@font-face {
+   font-family: Segoe UI_Bold;
+   src: url('Tipography/segoeuib.ttf');
+}
+
+@font-face {
+   font-family: Segoe UI_Light;
+   src: url('Tipography/segoeuil.ttf');
+}
+
+*{margin: 0; padding: 0}
+
+body{
+  overflow-x: hidden;
+}
+
+.wrap{
+  width: 90%;
+  height: auto;
+  display: table;
+  position: relative;
+  margin: auto;
+}
+
+.icon.visible{
+  visibility: visible;
+}
+
+.icon.hidden{
+  visibility: hidden;
+}
+
+.icon{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.nav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 100vh;
+  background: #474143;
+  z-index: 1000;
+}
+
+.nav >ul{
+  list-style: none;
+}
+
+.nav >ul > li{
+  display: block;
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.nav >ul > li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition-duration: .5s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.nav >ul > li a:hover{
+  color: #00ADA9;
+}
+
+.nav .help{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background-color: #333;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 10px 0;
+  text-decoration: none;
+  transition-duration: .5s;
+}
+
+.Submenu.visible{
+  width: 200px;
+  height: 100vh;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  background: #474143;
+  transition-duration: .5s;
+  visibility: visible;
+  user-select: none;
+}
+
+.Submenu.hidden{
+  width: 0px;
+  height: 100vh;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  background: #474143;
+  transition-duration: .5s;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.Submenu ul{
+  list-style: none;
+}
+
+.Submenu > li{
+  display: block;
+  text-align: left;
+  text-align: center;
+  padding: 27.5px 0px;
+}
+
+.Submenu > li > span{
+  font-family: Segoe UI_Light;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition-duration: .5s;
+  text-align: left;
+  color: #fff;
+}
+
+.Submenu input[type="text"]{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: none;
+  padding: 15px 0px;
+  background: #333;
+  font-family: Segoe UI_Light;
+  color: #fff;
+}
+
+.Submenu input[type="text"]:focus{
+  outline: none;
+}
+
+.head{
+  width: 100%;
+  height: 100vh;
+  background: #00ADA9 url('../img/backgrounds/Header_UI.jpg') fixed;/*url('../img/backgrounds/Header_UI.jpg')*/
+  background-size: cover cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.head .txt{
+  width: 500px;
+  height: auto;
+  display: table;
+  position: relative;
+  top: 20vh;
+  left: 10%;
+  padding: 10px;
+  z-index: 2;
+  margin: none;
+}
+
+.head .txt h1{
+  font-family: Segoe UI_Bold;
+  font-size: 4.5em;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.head h1::before{
+  content: 'Hello World.';
+}
+
+.head .txt p{
+  font-family: Segoe UI_Normal;
+  color: #fff;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.head .txt a{
+  padding: 10px 40px;
+  background: #FFF;
+  color: #00ADA9;
+  font-family: Segoe UI_Bold;
+  text-decoration: none;
+  font-size: 1.5em;
+  border-radius: 50px;
+  position: relative;
+  top: 70px;
+  user-select: none;
+  border: 2px solid #FFF;
+  transition-duration: .3s;
+}
+
+.head .txt a:hover{
+  background: transparent;
+  color: #FFF;
+}
+
+.head .img{
+  width: 700px;
+  height: auto;
+  position: absolute;
+  right: 5%;
+  bottom: -10px;
+  z-index: 1;
+  user-select: none;
+  -webkit-box-shadow: -7px 1px 109px -15px rgba(0,0,0,0.75);
+  -moz-box-shadow: -7px 1px 109px -15px rgba(0,0,0,0.75);
+  box-shadow: -7px 1px 109px -15px rgba(0,0,0,0.75);
+  display: table;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-duration: 2s;
+}
+
+.mask.green{
+  background: rgba(0, 173, 169, 0.8);
+}
+
+.mask.green:hover{
+  background: rgba(0, 173, 169, 0.5);
+}
+
+.head .img img{
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width:841px){
+  .head .img{
+    width: 80%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width:611px){
+  .head .img{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:712px){
+  .head .txt{
+    width: 70%;
+    margin: auto;
+    left: none;
+  }
+}
+
+@media screen and (max-width:418px){
+  .head{
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    padding-bottom: 400px;
+  }
+}
+
+.head .Logtype{
+  position: absolute;
+  left: 5em;
+  top: 50px;
+  width: 200px;
+  height: auto;
+  user-select: none;
+}
+
+.head .Logtype img{
+  width: 200px;
+  height: auto;
+}
+
+.page-info{
+  position: absolute;
+  right: 5%;
+  top: -100px;
+  user-select: none;
+}
+
+.page-info span{
+  font-family: Segoe UI_Bold;
+  color: rgba(155,255,255,0.4);
+  font-size: 40em;
+  -webkit-text-shadow: -7px 1px 109px -15px rgba(0,0,0,0.75);
+  -moz-text-shadow: -7px 1px 109px -15px rgba(0,0,0,0.75);
+  text-shadow: -7px 1px 109px -15px rgba(0,0,0,0.75);
+}
+
+.sect{
+  width: 100%;
+  height: auto;
+  display: table;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  user-select: none;
+}
+
+.white{
+  background: #fff;
+  text-align: center;
+}
+
+.white h1{
+  font-family: Segoe UI_Bold;
+  color: #474143;
+  text-transform: uppercase;
+}
+.white p{
+  width: 70%;
+  height: auto;
+  display: table;
+  color: #474143;
+  font-family: Segoe UI_Light;
+  font-size: 1.2em;
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+
+.items{
+  width: 80%;
+  height: auto;
+  display: table;
+  text-align: center;
+  position: relative;
+  margin: auto;
+}
+
+.items .item{
+  width: 24.7%;
+  height: auto;
+  display: table;
+  position: relative;
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.items .item span{
+  font-size: 5em;
+  color: #FF6444;
+}
+
+.items .item h1{
+  font-size: 1.5em;
+}
+
+.items .item p{
+  font-size: 1em;
+}
+
+@media screen and (max-width:1112px) {
+  .items .item{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:587px) {
+  .items .item{
+    width: 100%;
+  }
+}
