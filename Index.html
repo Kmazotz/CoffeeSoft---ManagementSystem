@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="ADSI - 146">
+  <title>CoffeeSoft - home</title>
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/normalize/normalize.css">
+</head>
+<body>
+  <div class="nav">
+    <ul class="menu">
+      <li><a id="TogleMenu" class="icon visible"><span class="lnr lnr-menu" id="open"></span></a><a id="CloseMenu" class="icon hidden"><span class="lnr lnr-menu" id="open"></span></a>
+          <ul class="Submenu hidden" id="submenu">
+            <li><span>&nbsp;</span></li>
+            <li><span>Home</span></li>
+            <li><span>Download</span></li>
+            <li><span>About</span></li>
+
+            <input type="text" name="search" placeholder="Search...">
+          </ul>
+      </li>
+      <li><a href="#"><span class="lnr lnr-home"></span></a></li>
+      <li><a href="#"><span class="lnr lnr-coffee-cup"></span></a></li>
+      <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+    </ul>
+    <a class="help"><span class="lnr lnr-magnifier"></span></a>
+  </div>
+
+  <div class="head" id="header">
+    <div class="Logtype">
+      <img src="img/Coffee_Logotype.png" alt="Logotype">
+      <div class="mask"></div>
+    </div>
+
+    <div class="page-info">
+      <span>O1</span>
+    </div>
+
+    <div class="txt">
+      <h1></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum beatae eum assumenda, sunt officiis,
+        veritatis voluptatem eaque, numquam, impedit accusamus possimus qui totam consequuntur amet repudiandae ipsum animi!
+        Tempore, delectus.</p>
+
+        <a href="#">Get V_0.01</a>
+    </div>
+
+    <div class="img">
+      <img src="img/Items/APP.png" alt="Desk APP">
+      <div class="mask green"></div>
+    </div>
+  </div>
+
+  <main>
+    <section class="sect white">
+      <div class="wrap">
+        <h1>Esta App es Asombrosa!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam amet modi eius minima,
+          porro ducimus consequuntur reiciendis aperiam, corporis, magni eos! Esse possimus inventore natus,
+          a tempore ex quis dolorem!
+
+          Quos assumenda at architecto! Esse temporibus facere alias quidem dolorum
+          excepturi dolorem voluptates deserunt fugit voluptas accusantium quaerat,
+          eius eos corporis eum eaque, possimus numquam nobis necessitatibus saepe animi, autem.</p>
+      </div>
+    </section>
+
+    <section class="sect white">
+      <div class="wrapp">
+        <div class="items">
+          <div class="item">
+            <div class="icons">
+              <span class="lnr lnr-laptop-phone"></span>
+            </div>
+            <h1>Responsive</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="item">
+            <div class="icons">
+              <span class="lnr lnr-cloud-check"></span>
+            </div>
+            <h1>Almacenamiento</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="item">
+            <div class="icons">
+              <span class="lnr lnr-cog"></span>
+            </div>
+            <h1>Soporte</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="item">
+            <div class="icons">
+              <span class="lnr lnr-rocket"></span>
+            </div>
+            <h1>Velocidad</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/jquery-3.3.1.js" charset="utf-8"></script>
+  <script src="js/menu.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      var head = document.getElementById('header');
+      head.onmousemove = function(e) {
+        var x = -(e.clientX/ 10);
+        var y = -(e.clientY/ 10);
+          this.style.backgroundPosition = x + 'px ' + y + 'px';
+        };
+      };
+  </script>
+</body>
+</html>
